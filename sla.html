@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/botao.css">
+    <link rel="stylesheet" href="style/registros.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Controle de Livros - ECIT POP</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Aluno</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome Completo</th>
+                    <th>Turma</th>
+                    <th>Email</th>
+                    <th>Livro</th>
+                    <th>Data de aquisição</th>
+                    <th>Data de devolução</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome completo do aluno" required>
+                    <input type="text" id="turma" class="modal-field" placeholder="Turma e Curso do aluno" required>
+                    <input type="email" id="email" class="modal-field" placeholder="Email do Aluno" required>
+                    <input type="text" id="livro" class="modal-field" placeholder="Livro Requerido" required>
+                    <input type="date" id="data" class="modal-field" placeholder="Data de aquisição" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/script.js" defer></script>
+</html>
